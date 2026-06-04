@@ -4,7 +4,6 @@ import { jsPDF } from 'jspdf';
 import * as XLSX from 'xlsx';
 import { Download, Plus, Trash2, X, FileSpreadsheet, ArrowLeft } from 'lucide-react';
 import Header from './components/Header';
-import LoginPage from './components/LoginPage';
 import TemplateSidebar from './components/TemplateSidebar';
 import EditPanel from './components/EditPanel';
 import CertificateCanvas from './components/CertificateCanvas';
@@ -12,7 +11,7 @@ import { templates } from './data/templates';
 import './index.css';
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({ name: 'User' }); // Auto-login
   const [selectedTemplate, setSelectedTemplate] = useState(templates[0]);
   const [certificates, setCertificates] = useState([]);
   const [selectedCertificateId, setSelectedCertificateId] = useState(1);
